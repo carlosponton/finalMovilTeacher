@@ -39,5 +39,6 @@
     <string name="english">Inglés</string>
     <string name="music">Música</string>
     <string name="history">Historia</string>
+    <string name="error_topics">Selecciona uno de los topicos</string>
 </resources>
 

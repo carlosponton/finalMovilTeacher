@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="materialCardViewStyle" format="reference"/>
+
+    <declare-styleable name="MaterialCardView">
+        <!-- Specifies the color used to draw the path outline of the card. Attribute type definition is
+             in resources package. -->
+        <attr name="strokeColor"/>
+        <!-- Width of the stroke path of the card. Default is 0. Attribute type definition is in
+             resources package. -->
+        <attr name="strokeWidth"/>
+    </declare-styleable>
+</resources>
