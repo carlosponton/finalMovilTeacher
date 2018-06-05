@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "778964693891",
+    "firebase_url": "https://tutor-bfe83.firebaseio.com",
+    "project_id": "tutor-bfe83",
+    "storage_bucket": "tutor-bfe83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778964693891:android:90e1db9b2e671111",
+        "android_client_info": {
+          "package_name": "com.clases.carlosponton.tutorstudend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778964693891-tljs6ui8taenrhk5mf8mcrn9521lv403.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clases.carlosponton.tutorstudend",
+            "certificate_hash": "c2a5db3d58e96f877988b2dd1228efc6db975124"
+          }
+        },
+        {
+          "client_id": "778964693891-kl27196aavrio6ni3c2pthmhbht29p1u.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "778964693891-kl27196aavrio6ni3c2pthmhbht29p1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr17L9XI4yMGaYUnUd1iEeEy6JqazXE1I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778964693891-kl27196aavrio6ni3c2pthmhbht29p1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778964693891:android:d26ebc3acb9b28c0",
+        "android_client_info": {
+          "package_name": "com.clases.carlosponton.tutorteacher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778964693891-tuspmhktdpjito5tc60gv342logvhpue.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clases.carlosponton.tutorteacher",
+            "certificate_hash": "c2a5db3d58e96f877988b2dd1228efc6db975124"
+          }
+        },
+        {
+          "client_id": "778964693891-kl27196aavrio6ni3c2pthmhbht29p1u.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "778964693891-kl27196aavrio6ni3c2pthmhbht29p1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr17L9XI4yMGaYUnUd1iEeEy6JqazXE1I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778964693891-kl27196aavrio6ni3c2pthmhbht29p1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
