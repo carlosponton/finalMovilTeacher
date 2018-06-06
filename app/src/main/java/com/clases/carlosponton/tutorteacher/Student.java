@@ -71,5 +71,6 @@ public class Student {
     public void setUri(String uri) {
         this.uri = uri;
     }
+
 }
 

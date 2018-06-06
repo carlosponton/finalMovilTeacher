@@ -14,6 +14,14 @@ public class Reservation {
         this.status = 1;
     }
 
+    public Reservation(String id, String idStudent, String idTeacher, String comment, int status){
+        this.id = id;
+        this.idStudent = idStudent;
+        this.idTeacher = idTeacher;
+        this.comment = comment;
+        this.status = status;
+    }
+
     public Reservation(){
 
     }

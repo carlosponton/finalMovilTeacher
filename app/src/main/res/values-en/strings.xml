@@ -30,4 +30,12 @@
     <string name="music">Music</string>
     <string name="history">History</string>
     <string name="error_topics">Select one of the topics</string>
+    <string name="reservation">Reservation</string>
+    <string name="comment">Comment</string>
+    <string name="accept">Accept</string>
+    <string name="discard">Discard</string>
+    <string name="rechazar">Reject</string>
+    <string name="positivo">YES</string>
+    <string name="negativo">NO</string>
+    <string name="pregunta_eliminacion">Are you sure you want to reject this student?</string>
 </resources>

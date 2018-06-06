@@ -1,11 +1,10 @@
 package com.clases.carlosponton.tutorteacher;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,7 +14,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
@@ -62,6 +61,7 @@ public class HomeActivity extends AppCompatActivity
         txtEmail = (TextView) headerView.findViewById(R.id.txtEmail);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        storageReference = FirebaseStorage.getInstance().getReference();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -103,7 +103,7 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
-        //Listar los tutores
+        //Listar los reservaciones
         lstStudent = findViewById(R.id.lstStudent);
 
         reservations = new ArrayList<>();
@@ -115,7 +115,7 @@ public class HomeActivity extends AppCompatActivity
         lstStudent.setLayoutManager(llm);
         lstStudent.setAdapter(adapter);
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        databaseReference.child(bd).addValueEventListener(new ValueEventListener() {
+        databaseReference.child(bd).orderByChild("status").equalTo(1d).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 reservations.clear();
@@ -151,10 +151,9 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Fragment fragment = null;
         int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_report) {
         } else if (id == R.id.nav_logout) {
             firebaseAuth.signOut();
             i = new Intent(this,MainActivity.class);
@@ -170,16 +169,13 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public void onReservationClick(Reservation r) {
         Intent i = new Intent(HomeActivity.this,ReservationDetail.class);
-        /*Bundle b = new Bundle();
-        b.putString("id",t.getId());
-        b.putString("name",t.getName());
-        b.putString("email",t.getEmail());
-        b.putInt("city",t.getCity());
-        b.putString("sex",t.getSex());
-        b.putStringArrayList("topics",t.getTopics());
-        b.putString("pic",t.getUri());
+        Bundle b = new Bundle();
+        b.putString("id",r.getId());
+        b.putString("idTeacher",r.getIdTeacher());
+        b.putString("idStudent",r.getIdStudent());
+        b.putString("comment",r.getComment());
 
-        i.putExtra("datos",b);*/
+        i.putExtra("datos",b);
         startActivity(i);
     }
 }
